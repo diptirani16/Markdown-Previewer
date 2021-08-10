@@ -1,8 +1,30 @@
 .App {
   text-align: center;
+  background-color: rgb(182, 252, 199);
+  width: 100vw;
+  height: 100vh;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+  width: 70vw;
+  height: 80vh;
+}
+#editor {
+  min-width: 30vw;
+  min-height: 80vh;
+  padding: 5%;
+  border: none;
+}
+#preview {
+  background-color: white;
+  max-width: 30vw;
+  min-height: 80vh;
+  padding: 5%;
+  text-align: left;
 }
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +57,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
