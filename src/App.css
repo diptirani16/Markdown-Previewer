@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: rgb(62, 201, 97);
+  background-color: rgb(182, 252, 199);
   width: 100vw;
   height: 100vh;
 }
@@ -11,15 +11,15 @@
   height: 80vh;
 }
 #editor {
-  width: 30vw;
-  height: 80vh;
+  min-width: 30vw;
+  min-height: 80vh;
   padding: 5%;
   border: none;
 }
 #preview {
   background-color: white;
-  width: 30vw;
-  height: 80vh;
+  max-width: 30vw;
+  min-height: 80vh;
   padding: 5%;
   text-align: left;
 }

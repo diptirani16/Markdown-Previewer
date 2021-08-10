@@ -1,21 +1,30 @@
-// import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import marked from 'marked';
+import ReactMarkdown from 'react-markdown'
 
 
 class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      // input: ''
-      markdown: ""
+      markdown: '# Heading' + '\n'
+
+      + ' ## sub-heading...' + '\n' +
+      '[links](https://www.freecodecamp.org)' + '\n' +  '\n' +
+      'Inline code `<div></div>`' + '\n' + '\n' +
+      ' > Block Quotes!' + '\n' + '\n' +
+      '**Bolded text**' + '\n' + '\n' +
+      ' > Block Quotes!' + '\n' +
+      '- item1' + '\n' +
+      '- item2' + '\n' +
+      '- item3' + '\n' +
+      '![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)'
+            
     }
   }
 
   updateMarkdown (markdown){
-    this.setState({
-      // input: e.target.value
+      this.setState({
       markdown
     })
   }
@@ -28,10 +37,9 @@ class App extends React.Component {
         <div className="container">
 
           <div class="card">
-            <div class="card-header bg-info">
+            <div class="card-header bg-success">
               Editor
             </div>
-              {/* <textarea id="editor" onChange={this.handleChange.bind(this)}></textarea> */}
               <textarea id="editor" value={this.state.markdown}
                   onChange={(e) => {
                     this.updateMarkdown(e.target.value);
@@ -40,13 +48,12 @@ class App extends React.Component {
           </div>
 
           <div class="card">
-            <div class="card-header bg-info">
+            <div class="card-header bg-success">
               Previewer
             </div>
-              {/* <div id="preview">{this.state.input}</div> */}
-              <div id="preview" dangerouslySetInnerHTML={{
-                  __html: marked(this.state.markdown),
-                }}></div> 
+              <div id="preview" className="overflow-auto">
+                <ReactMarkdown children={this.state.markdown} />
+              </div>
           </div>
 
         </div>
