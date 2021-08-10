@@ -23,6 +23,71 @@
   padding: 5%;
   text-align: left;
 }
+.card-container {
+  height: auto;
+}
+
+@media screen and (max-width: 480px) {
+  .App {
+    height: auto;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 6%;
+    width: auto;
+    height: auto;
+  }
+  #editor {
+    min-width: 30vw;
+    min-height: 50vh;
+    padding: 5%;
+    border: none;
+  }
+  #preview {
+    background-color: white;
+    max-width: 75vw;
+    min-height: 80vh;
+    padding: 5%;
+    text-align: left;
+  }
+  .card-container {
+    height: 90vh;
+    margin: 4vh 0;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 840px) {
+  .App {
+    height: auto;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 6%;
+    width: auto;
+    height: auto;
+  }
+  #editor {
+    min-width: 30vw;
+    min-height: 50vh;
+    padding: 5%;
+    border: none;
+  }
+  #preview {
+    background-color: white;
+    max-width: 75vw;
+    min-height: 80vh;
+    padding: 5%;
+    text-align: left;
+  }
+  .card-container {
+    height: 90vh;
+    margin: 4vh 0;
+  }
+}
 
 /* .App-logo {
   height: 40vmin;

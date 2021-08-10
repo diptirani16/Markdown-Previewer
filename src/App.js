@@ -45,8 +45,8 @@ class App extends React.Component {
         <h1>Markdown Previewer</h1>
         <div className="container">
 
-          <div class="card">
-            <div class="card-header bg-success">
+          <div className="card">
+            <div className="card-header bg-success">
               Editor
             </div>
               <textarea id="editor" value={this.state.markdown}
@@ -56,8 +56,8 @@ class App extends React.Component {
 
           </div>
 
-          <div class="card">
-            <div class="card-header bg-success">
+          <div className="card card-container">
+            <div className="card-header bg-success">
               Previewer
             </div>
               <div id="preview" className="overflow-auto">
